@@ -1,0 +1,32 @@
+service: typescript-serverless-template
+
+package:
+  excludeDevDependencies: false
+  patterns:
+    - '!src/**'
+    - '!.env'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  deploymentBucket:
+    name: ${env:AWS_DEPLOYMENT_BUCKET}
+  stage: ${env:STAGE}
+  region: ${env:AWS_REGION}
+
+plugins:
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
+
+functions:
+  hello:
+    handler: dist/handlers/hello.handle
+    timeout: 30
+    memorySize: 128
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true
+    environment:
+      HELLO_WHO: ${env:HELLO_WHO}

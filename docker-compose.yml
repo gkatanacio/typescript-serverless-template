@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  node:
+    image: node:14
+    volumes:
+      - .:/code:cached
+    working_dir: /code
+
+  serverless:
+    image: amaysim/serverless:2.44.0
+    volumes:
+      - .:/app:cached
+    working_dir: /app
+    env_file: .env
