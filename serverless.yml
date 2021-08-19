@@ -2,10 +2,6 @@ service: typescript-serverless-template
 
 package:
   excludeDevDependencies: false
-  patterns:
-    - '!src/**'
-    - '!dist/**/*.test.js'
-    - '!.env'
 
 provider:
   name: aws
@@ -16,12 +12,13 @@ provider:
   region: ${env:AWS_REGION}
 
 plugins:
+  - serverless-plugin-typescript
   - serverless-plugin-common-excludes
   - serverless-plugin-include-dependencies
 
 functions:
   hello:
-    handler: dist/handlers/hello.handle
+    handler: src/handlers/hello.handle
     timeout: 30
     memorySize: 128
     events:

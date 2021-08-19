@@ -19,10 +19,6 @@ lint: .env node_modules
 test: .env node_modules
 	docker-compose run --rm node npm test
 
-.PHONY: build
-build: .env node_modules
-	docker-compose run --rm node npm run build
-
 .PHONY: deploy
-deploy: .env node_modules dist
+deploy: .env node_modules
 	docker-compose run --rm serverless sls deploy

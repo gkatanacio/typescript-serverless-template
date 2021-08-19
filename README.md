@@ -32,11 +32,6 @@ $ make lint
 $ make test
 ```
 
-#### compile typescript files (generate `dist`)
-```bash
-$ make build
-```
-
 #### deploy serverless application
 ```bash
 $ make deploy
