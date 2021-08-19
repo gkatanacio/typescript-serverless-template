@@ -4,6 +4,10 @@ import {
   Context,
 } from 'aws-lambda';
 
+import GreetingService from '../services/greeting-service';
+
+const greetingService = new GreetingService('!');
+
 module.exports.handle = async (
   event: APIGatewayProxyEvent,
   context: Context,
@@ -12,7 +16,7 @@ module.exports.handle = async (
   context.callbackWaitsForEmptyEventLoop = false;
 
   const result = {
-    message: `hello ${process.env.HELLO_WHO}!`,
+    message: greetingService.greet(process.env.HELLO_WHO as string),
   };
 
   callback(null, {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "TypeScript + Serverless Framework + 3 Musketeers",
   "scripts": {
-    "test": "jest --verbose src/tests",
+    "test": "jest --verbose src/**/*.test.ts",
     "build": "rm -rf dist && npx tsc",
     "lint": "npx eslint src/**/*.ts",
     "lint:fix": "npx eslint --fix src/**/*.ts"
@@ -20,6 +20,7 @@
     "jest": "^27.0.6",
     "serverless-plugin-common-excludes": "^4.0.0",
     "serverless-plugin-include-dependencies": "^5.0.0",
+    "ts-jest": "^27.0.5",
     "typescript": "^4.3.5"
   }
 }

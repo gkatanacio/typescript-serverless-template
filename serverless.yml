@@ -4,6 +4,7 @@ package:
   excludeDevDependencies: false
   patterns:
     - '!src/**'
+    - '!dist/**/*.test.js'
     - '!.env'
 
 provider:
