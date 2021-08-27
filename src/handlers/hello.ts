@@ -1,7 +1,4 @@
-import {
-  APIGatewayProxyEvent,
-  Context,
-} from 'aws-lambda';
+import { APIGatewayProxyEvent, Context } from 'aws-lambda';
 
 import GreetingService from '../services/greeting-service';
 
