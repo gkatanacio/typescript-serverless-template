@@ -5,9 +5,8 @@ import GreetingService from '../services/greeting-service';
 const greetingService = new GreetingService('!');
 
 module.exports.handle = async (event: APIGatewayProxyEvent, context: Context) => {
-  context.callbackWaitsForEmptyEventLoop = false;
-
   const result = {
+    requestId: context.awsRequestId,
     message: greetingService.greet(process.env.HELLO_WHO as string),
   };
 
