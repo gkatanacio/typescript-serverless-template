@@ -1,5 +1,7 @@
 service: typescript-serverless-template
 
+frameworkVersion: "3"
+
 package:
   individually: true
 
