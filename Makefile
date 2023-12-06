@@ -9,16 +9,16 @@ endif
 
 .PHONY: deps
 deps: .env
-	docker-compose run --rm node npm install
+	docker compose run --rm node npm install
 
 .PHONY: lint
 lint: .env node_modules
-	docker-compose run --rm node npm run lint:fix
+	docker compose run --rm node npm run lint:fix
 
 .PHONY: test
 test: .env node_modules
-	docker-compose run --rm node npm test
+	docker compose run --rm node npm test
 
 .PHONY: deploy
 deploy: .env node_modules
-	docker-compose run --rm serverless sls deploy
+	docker compose run --rm serverless sls deploy
