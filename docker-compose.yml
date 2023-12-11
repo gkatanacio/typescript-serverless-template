@@ -2,13 +2,13 @@ version: "3"
 
 services:
   node:
-    image: node:18-alpine
+    image: node:20-alpine
     volumes:
       - .:/code:cached
     working_dir: /code
 
   serverless:
-    image: amaysim/serverless:3.35.2
+    image: amaysim/serverless:3.36.0
     volumes:
       - .:/app:cached
     working_dir: /app
