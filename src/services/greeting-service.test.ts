@@ -1,4 +1,4 @@
-import GreetingService from './greeting-service';
+import { GreetingService } from './greeting-service';
 
 test('greet', () => {
   const greetingService = new GreetingService('?');

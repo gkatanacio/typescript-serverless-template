@@ -1,4 +1,4 @@
-export default class GreetingService {
+export class GreetingService {
   punctuation: string;
 
   constructor(punctuation: string) {

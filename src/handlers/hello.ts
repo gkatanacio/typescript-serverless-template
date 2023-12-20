@@ -1,6 +1,6 @@
 import { APIGatewayProxyEvent, Context } from 'aws-lambda';
 
-import GreetingService from '../services/greeting-service';
+import { GreetingService } from '../services/greeting-service';
 
 const greetingService = new GreetingService('!');
 
