@@ -6,6 +6,6 @@ export class GreetingService {
   }
 
   greet(name: string): string {
-    return `hello ${name}${this.punctuation}`;
+    return `Hello, ${name}${this.punctuation}`;
   }
 }
