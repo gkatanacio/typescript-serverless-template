@@ -20,7 +20,7 @@ $ make .env
 
 - see generated `.env` file for configuration
 
-**Note:** For deployment via CI/CD, `CICD_MODE` environment variable should be set to `true` in the build server. All configuration should also be set in the build server's environment variables. They will automatically be used if `.env` is generated from `.env.cicd`.
+**Note:** For deployment via CI/CD, `CICD_MODE` environment variable should be set to `true` in the build server. All env configuration should then be set in the build server's environment variables. They will automatically be used if `.env` is generated from `.env.cicd`. See [Docker's handling of env variables from host environment](https://docs.docker.com/engine/reference/commandline/run/#:~:text=You%20can%20also%20use%20variables%20exported%20to%20your%20local%20environment) for more details.
 
 #### install dependencies (generate `node_modules`)
 
