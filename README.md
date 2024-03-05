@@ -4,7 +4,7 @@ Template for TypeScript serverless applications.
 
 Deploys an [AWS Lambda application](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) by utilizing [Serverless Framework](https://www.serverless.com). Env file (i.e., `.env`) is used for configuration.
 
-Since this tries to follow the [3 Musketeers](https://3musketeersdev.netlify.app) pattern, the following are heavily used:
+Since this tries to follow the [3 Musketeers](https://3musketeers.pages.dev/) pattern, the following are heavily used:
 
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
