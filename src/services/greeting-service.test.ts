@@ -1,7 +1,10 @@
+import { test } from "node:test"
+import assert from "node:assert"
+
 import { GreetingService } from './greeting-service';
 
 test('greet', () => {
   const greetingService = new GreetingService('?');
 
-  expect(greetingService.greet('John Doe')).toBe('Hello, John Doe?');
+  assert.equal(greetingService.greet('John Doe'), 'Hello, John Doe?');
 });
