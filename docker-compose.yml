@@ -6,7 +6,7 @@ services:
     working_dir: /code
 
   serverless:
-    image: gkatanacio/oss-serverless:3.52.0
+    image: gkatanacio/oss-serverless:3.59.2
     volumes:
       - .:/app:cached
     working_dir: /app
